@@ -203,10 +203,11 @@ function showMessage(e, input) {
         input.nextElementSibling.textContent = "can not contain number";
       }
       if (input.classList.contains("etat")) {
-        status.includes(input.value)
-          ? ""
-          : (input.nextElementSibling.textContent =
-              "Etat: en validation or validé or rejeté ");
+        if (!status.includes(input.value)) {
+          input.nextElementSibling.textContent =
+            "Etat: en validation or validé or rejeté ";
+          input.classList.remove("valid");
+        }
       }
     } else {
       // check date
