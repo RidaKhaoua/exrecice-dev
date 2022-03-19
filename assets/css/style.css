@@ -169,8 +169,10 @@ main .add-users .container .btn .add.disabled {
   margin-bottom: 20px;
 }
 
-.show-data .container .content-table {
-  overflow: scroll;
+@media (max-width: 771px) {
+  .show-data .container .content-table {
+    overflow: scroll;
+  }
 }
 
 .show-data .container table thead tr th {
