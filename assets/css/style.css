@@ -50,6 +50,76 @@ body {
 }
 /* end global rules */
 
+/* show users */
+
+.show-data .container table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px var(--main-color);
+  border-radius: 6px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 771px) {
+  .show-data .container .content-table {
+    overflow-x: scroll;
+  }
+}
+
+.show-data .container table thead tr th {
+  padding: 20px 0;
+  text-transform: capitalize;
+}
+
+@media (max-width: 771px) {
+  .show-data .container table thead tr th {
+    font-size: 0.6rem;
+  }
+}
+
+.show-data .container table tbody tr td {
+  border-top: 1px solid var(--main-color);
+  padding: 20px 8px;
+}
+
+.show-data .container table tbody tr {
+  transition: 0.5s linear;
+}
+
+.show-data .container table tbody tr.hidden {
+  opacity: 0;
+}
+
+.show-data .container table tbody tr td span {
+  color: white;
+  padding: 4px;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  width: 80px;
+  display: inline-block;
+}
+
+.show-data .container table tbody tr td.delete {
+  cursor: pointer;
+}
+
+.show-data .container table tbody tr td.nom,
+.show-data .container table tbody tr td.prenom {
+  text-transform: capitalize;
+}
+
+.show-data .container .add-user {
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 0 10px var(--main-color);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* end show users */
+
 /* start add users */
 
 main {
@@ -156,76 +226,6 @@ main .add-users .container .btn .add.disabled {
 }
 
 /* end add users */
-
-/* show users */
-
-.show-data .container table {
-  width: 100%;
-  text-align: center;
-  border-collapse: collapse;
-  box-shadow: 0 0 10px var(--main-color);
-  border-radius: 6px;
-  padding: 30px;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 771px) {
-  .show-data .container .content-table {
-    overflow-x: scroll;
-  }
-}
-
-.show-data .container table thead tr th {
-  padding: 20px 0;
-  text-transform: capitalize;
-}
-
-@media (max-width: 771px) {
-  .show-data .container table thead tr th {
-    font-size: 0.6rem;
-  }
-}
-
-.show-data .container table tbody tr td {
-  border-top: 1px solid var(--main-color);
-  padding: 20px 8px;
-}
-
-.show-data .container table tbody tr {
-  transition: 0.5s linear;
-}
-
-.show-data .container table tbody tr.hidden {
-  opacity: 0;
-}
-
-.show-data .container table tbody tr td span {
-  color: white;
-  padding: 4px;
-  border-radius: 6px;
-  font-size: 0.65rem;
-  width: 80px;
-  display: inline-block;
-}
-
-.show-data .container table tbody tr td.delete {
-  cursor: pointer;
-}
-
-.show-data .container table tbody tr td.nom,
-.show-data .container table tbody tr td.prenom {
-  text-transform: capitalize;
-}
-
-.show-data .container .add-user {
-  display: flex;
-  justify-content: flex-end;
-  box-shadow: 0 0 10px var(--main-color);
-  padding: 20px;
-  border-radius: 6px;
-}
-
-/* end show users */
 
 .copyright {
   text-align: center;
