@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- file normalise -->
+        <link rel="stylesheet" href="assets/css/normalise.css">
+
+        <!-- font awsome -->
+        <link rel="stylesheet" href="assets/css/all.min.css">
+
+        <!-- style -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Exercice 1</title>
+    </head>
+
+    <body>
+        <main>
+            <!-- start show users -->
+            <div class="show-data">
+                <div class="container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>date de creation</th>
+                                <th>etat</th>
+                                <th>nom</th>
+                                <th>prénom</th>
+                                <th>nom d'utilisateur</th>
+                                <th>matricule</th>
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div class="add-user">
+                        <button type="add" class="main-btn">ajouter utilisateur</button>
+                    </div>
+                </div>
+            </div>
+            <!-- end show users -->
+            <!-- start add users -->
+            <div class="add-users hidden">
+                <div class="container">
+                    <h2 class="title">Ajouter d'utilisateurs </h2>
+                    <form action="#">
+                        <div class="content">
+                            <div class="first">
+                                <div class="name">
+                                    <label for="nom">nom</label>
+                                    <input type="text" id="nom" class="nom test">
+                                    <span class="show-error"></span>
+                                </div>
+                                <div class="user-name">
+                                    <label for="user-name">nom d'utilsateur</label>
+                                    <input type="text" id="user-name" class="user-name">
+
+                                </div>
+                                <div class="matricule">
+                                    <label for="matricule">matricule</label>
+                                    <input type="text" id="matricule" class="matricule">
+
+                                </div>
+                            </div>
+                            <div class="second">
+                                <div class="prenom">
+                                    <label for="prenom">prenom</label>
+                                    <input type="text" id="prenom" class="prenom test">
+                                    <span class="show-error"></span>
+                                </div>
+                                <div class="date-creation">
+                                    <label for="date-creation">date de creation</label>
+                                    <input type="text" placeholder="Exp:yyyy-mm-dd" id="date-creation"
+                                        class="date-creation test">
+                                    <span class="show-error"></span>
+                                </div>
+                            </div>
+                            <div class="three">
+                                <div class="etat">
+                                    <label for="etat">etat</label>
+                                    <input type="text" id="etat" class="etat test">
+                                    <span class="show-error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <button type="button" class="add main-btn ">enregistrer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end add users -->
+            <div class="copyright">created By Rida khaoua <a href="https://github.com/RidaKhaoua">github</a></div>
+        </main>
+        <script src="assets/js/main.js"></script>
+    </body>
+
+</html>
