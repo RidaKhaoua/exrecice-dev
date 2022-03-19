@@ -185,21 +185,31 @@ function checkEmptyInput(params) {
 
 // show message if value of input is incorrect
 function showMessage(e, input) {
+  let status = ["en validation", "validé", "rejeté"];
   if (e.key === "Backspace") {
     input.nextElementSibling.textContent = "";
     input.classList.remove("valid");
   }
+  /* start check when the input is not null*/
   if (input.value !== "") {
+    // other class has test and date creation has test
     if (!input.classList.contains("date-creation")) {
+      // enter just letters
       if (/^[^0-9]+$/gi.test(input.value)) {
         input.nextElementSibling.textContent = "";
         input.classList.add("valid");
       } else {
         input.classList.remove("valid");
-
         input.nextElementSibling.textContent = "can not contain number";
       }
+      if (input.classList.contains("etat")) {
+        status.includes(input.value)
+          ? ""
+          : (input.nextElementSibling.textContent =
+              "Etat: en validation or validé or rejeté ");
+      }
     } else {
+      // check date
       if (
         /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/g.test(e.target.value)
       ) {
